@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: api-gateway
+  profiles:
+    active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: never
+
+clients:
+  services:
+    user:
+      base-url: ${USER_SERVICE_BASE_URL}
+    money:
+      base-url: ${MONEY_SERVICE_BASE_URL}
+    game:
+      base-url: ${GAME_SERVICE_BASE_URL}
+
+jwt:
+  secrets:
+    user: ${JWT_USER_SECRET}         # user JWT
+    internal: ${JWT_INTERNAL_SECRET} # internal JWT (interservice)
+
+security:
+  user:
+    issuer: ${JWT_USER_ISSUER}
+  internal:
+    issuer: ${JWT_INTERNAL_ISSUER}

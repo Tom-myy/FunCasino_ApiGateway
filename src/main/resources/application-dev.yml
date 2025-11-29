@@ -1,0 +1,9 @@
+server:
+  port: 8094 # change to 8091 (change all services)
+
+# Swagger
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
