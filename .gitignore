@@ -1,0 +1,35 @@
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### Logs ###
+*.log
+logs/
+*/logs/
+
+### OS Files ###
+.DS_Store
+Thumbs.db
+
+### JDK ###
+*.class
+
+### Backup ###
+*.swp
+*.swo
+
+### Spring Boot ###
+*.pid
+
+### Exclude build directories
+*/build/
